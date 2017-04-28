@@ -27,11 +27,12 @@ O framework do Hadoop é escrito, quase na totalidade, em Java, com algumas exce
 O HDFS tem muitas similaridades com um file system comum, entretanto, as diferenças são significativas: o HDFS é altamente tolerante a falhas, permite um throughput muito alto, o que torna-o uma ótima escolha para aplicações com grandes data sets.
 
 Premissas e objetivos a serem observados:
-Falhas de Hardware - falhas de hardware são a regra e não a exceção;
-Streaming Data Access - o HDFS é projetado para acesso batch dos dados, a ênfase é atingir um throughput muito alto ao invés de baixa latência;
-Grandes Data Sets - aplicações rodando no HDFS tem grandes data sets, um arquivo típico é medido em Gb ou Tb;
-Modelo de Coesão Simples - o HDFS necessita do modelo write-once-read-many para acesso dos arquivos;
-“Moving Computation is Cheaper than Moving Data” - o processamento requisitado por uma aplicação é muito mais eficiente quando realizado onde os dados estão armazenados, isso é especialmente verdadeiro quando os data sets são enormes;
-Portabilidade - há uma série de tipos de hardware e plataformas de software, o HDFS é projetado para ser portável e instalado nesses diferentes tipos.
+
+* Falhas de Hardware - falhas de hardware são a regra e não a exceção;
+* Streaming Data Access - o HDFS é projetado para acesso batch dos dados, a ênfase é atingir um throughput muito alto ao invés de baixa latência;
+* Grandes Data Sets - aplicações rodando no HDFS tem grandes data sets, um arquivo típico é medido em Gb ou Tb;
+* Modelo de Coesão Simples - o HDFS necessita do modelo write-once-read-many para acesso dos arquivos;
+* “Moving Computation is Cheaper than Moving Data” - o processamento requisitado por uma aplicação é muito mais eficiente quando realizado onde os dados estão armazenados, isso é especialmente verdadeiro quando os data sets são enormes;
+* Portabilidade - há uma série de tipos de hardware e plataformas de software, o HDFS é projetado para ser portável e instalado nesses diferentes tipos.
 
 O HDFS possui arquitetura do tipo master/slave:
