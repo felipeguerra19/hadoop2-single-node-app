@@ -87,3 +87,10 @@ Nesse sentido, o primeiro comando a ser executado no *container* é o start do S
 ```
 O resultado esperado:
 ![Docker-Hadoop2-b](images/devops-hadoop-b.png)
+
+Na sequência, o *start* do Hadoop *core*:
+
+```shell
+./run.sh
+```
+![Docker-Hadoop2-c](images/devops-hadoop-c.png)
