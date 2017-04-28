@@ -71,3 +71,11 @@ chmod +x build-dockerfile.sh
 ```
 O resultado deve ser:
 ![Docker-Hadoop2-a](images/devops-hadoop-a.png)
+
+Com a imagem compilada, agora é possível acessar o *container* e finalizar o setup.
+
+```shell
+chmod +x build-dockerfile.sh
+
+./run-docker.sh
+```
