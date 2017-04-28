@@ -1,9 +1,9 @@
 # Big Data for Newbies?
 
 ## O que é Big Data?
-*”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”*
+***”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”***
 
-*Eric Schimidt*
+**Eric Schimidt**
 CEO Google 2001-2011
 
 
