@@ -103,3 +103,55 @@ hadoop dfs -mkdir -p /app/hadoop/books/tmp
 
 hdfs dfs -copyFromLocal /tmp/books/ /app/hadoop/books/tmp
 ```
+![Docker-Hadoop2-d](images/devops-hadoop-d.png)
+
+Para executar a contagem de palavras dos arquivos *.txt*, execute o *job*:
+
+```shell
+hadoop jar /usr/local/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.0.jar wordcount /app/hadoop/books/tmp/books /app/hadoop/books/out-1
+```
+O resultado esperado é: 
+```
+17/04/28 19:41:14 INFO mapreduce.Job: Job job_local1239149530_0001 completed successfully
+17/04/28 19:41:14 INFO mapreduce.Job: Counters: 35
+	File System Counters
+		FILE: Number of bytes read=4120785
+		FILE: Number of bytes written=8767314
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=11959179
+		HDFS: Number of bytes written=879197
+		HDFS: Number of read operations=33
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=6
+	Map-Reduce Framework
+		Map input records=78096
+		Map output records=629882
+		Map output bytes=6091113
+		Map output materialized bytes=1454541
+		Input split bytes=376
+		Combine input records=629882
+		Combine output records=100609
+		Reduce input groups=81942
+		Reduce shuffle bytes=1454541
+		Reduce input records=100609
+		Reduce output records=81942
+		Spilled Records=201218
+		Shuffled Maps =3
+		Failed Shuffles=0
+		Merged Map outputs=3
+		GC time elapsed (ms)=153
+		Total committed heap usage (bytes)=811638784
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters
+		Bytes Read=3684290
+	File Output Format Counters
+		Bytes Written=879197
+```
