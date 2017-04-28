@@ -91,6 +91,15 @@ O resultado esperado:
 Na sequência, o *start* do Hadoop *core*:
 
 ```shell
-./run.sh
+/usr/local/hadoop-2.8.0/sbin/start-all.sh
 ```
 ![Docker-Hadoop2-c](images/devops-hadoop-c.png)
+
+Alguns exemplos de *jobs* MapReduce são fornecidos junto com os binários do Hadoop. E é um deles que será utilizado como exemplo.
+
+Execute os comandos:
+```shell
+hadoop dfs -mkdir -p /app/hadoop/books/tmp
+
+hdfs dfs -copyFromLocal /tmp/books/ /app/hadoop/books/tmp
+```
