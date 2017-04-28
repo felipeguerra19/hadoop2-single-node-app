@@ -52,4 +52,7 @@ Apesar do framework do Hadoop ser escrito em Java, os jobs de MapReduce não pre
 A idéia fundamental do YARN é dividir as funcionalidades de gerenciamento de recurso e agendamento/monitoramento de job em diferentes daemons. A ideia é ter um ResourceManager (RM) global e um ApplicationMaster (AM) por aplicação. O ResourceManager e o NodeManager formam o framework de data-computation.
 
 Com o lançamento da versão 2 do Hadoop, o YARN foi introduzido para separar o gerenciamento do processamento e o gerenciamento de recursos.
-![YARN](images/yarn_architecture.png)
+![YARN](images/yarn_architecture.gif)
+
+## Hands On!
+### Instalando o Hadoop
