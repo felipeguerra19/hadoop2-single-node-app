@@ -58,3 +58,14 @@ Com o lançamento da versão 2 do Hadoop, o YARN foi introduzido para separar o 
 ## Hands On!
 ### Instalando o Hadoop
 O processo de instalação do Hadoop é um pouco trabalhoso, então, para facilitar o processo de aprendizagem dos *jobs* MapReduce, iremos utilizar uma imagem do [Docker](devops/Dockerfile-Hadoop2) com o setup inicial.
+
+Os detalhes de instalação do Docker, pode ser vistos [aqui](https://docs.docker.com/engine/installation/).
+
+Com o Docker devidamente configurado na estação, conseguiremos acessar o *container* contendo o *setup* inicia do Hadoop e validar o ambiente para a execução do MapReduce.
+
+Na linha de comando, execute o seguinte script:
+```
+chmod +x build-dockerfile.sh
+
+./build-dockerfile.sh
+```
