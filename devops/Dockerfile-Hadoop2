@@ -31,14 +31,26 @@ ENV PATH $PATH:$HADOOP_HOME/bin:$JAVA_HOME/bin
 RUN ssh-keygen -t rsa -f "/root/.ssh/id_rsa" -P "" -q \
     && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
-RUN /usr/local/hadoop-2.8.0/bin/hadoop namenode -format
+RUN mv /usr/local/hadoop-2.8.0/etc/hadoop/core-site.xml /usr/local/hadoop-2.8.0/etc/hadoop/core-site.xml.old \
+    && mv /usr/local/hadoop-2.8.0/etc/hadoop/hdfs-site.xml /usr/local/hadoop-2.8.0/etc/hadoop/hdfs-site.xml.old \
+    && mv /usr/local/hadoop-2.8.0/etc/hadoop/hadoop-env.sh /usr/local/hadoop-2.8.0/etc/hadoop/hadoop-env.sh.old
 
 COPY files/run.sh /root/
+
+COPY files/core-site.xml /usr/local/hadoop-2.8.0/etc/hadoop/
+
+COPY files/hdfs-site.xml /usr/local/hadoop-2.8.0/etc/hadoop/
+
+COPY files/mapred-site.xml /usr/local/hadoop-2.8.0/etc/hadoop/
+
+COPY files/hadoop-env.sh /usr/local/hadoop-2.8.0/etc/hadoop/
 
 WORKDIR /root/
 
 RUN chmod +x /root/run.sh
 
 EXPOSE 54310
+
+#ENTRYPOINT ["./run.sh"]
 
 CMD ["bash"]

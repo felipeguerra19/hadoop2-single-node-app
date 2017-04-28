@@ -1,2 +1,2 @@
-echo '############# Starting Dockerfile - Ansible #############'
-docker run -it -m 2048M -c 2 --name master bigdata/hadoop2:1.0
+echo '############# Starting the Container #############'
+docker run -it -m 1024M -c 2 --name master bigdata/hadoop2:1.0
