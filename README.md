@@ -57,3 +57,4 @@ Com o lançamento da versão 2 do Hadoop, o YARN foi introduzido para separar o 
 
 ## Hands On!
 ### Instalando o Hadoop
+O processo de instalação do Hadoop é um pouco trabalhoso, então, para facilitar o processo de aprendizagem dos *jobs* MapReduce, iremos utilizar uma imagem do [Docker](devops/Dockerfile-Hadoop2) com o setup inicial.
