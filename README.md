@@ -79,3 +79,11 @@ chmod +x build-dockerfile.sh
 
 ./run-docker.sh
 ```
+Como há diversos tutoriais sobre o assunto, foi escolhido [esse](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/) para servir de base da configuração do ambiente.
+Nesse sentido, o primeiro comando a ser executado no *container* é o start do SSH server e o *format* do HDFS, que estão no arquivo [run.sh](devops/files/run.sh).
+
+```shell
+./run.sh
+```
+O resultado esperado:
+![Docker-Hadoop2-b](images/devops-hadoop-b.png)
