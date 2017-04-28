@@ -69,3 +69,5 @@ chmod +x build-dockerfile.sh
 
 ./build-dockerfile.sh
 ```
+O resultado deve ser:
+![Docker-Hadoop2-a](images/devops-hadoop-a.png)
