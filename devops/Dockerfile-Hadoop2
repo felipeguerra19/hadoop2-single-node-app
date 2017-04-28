@@ -1,0 +1,44 @@
+FROM ubuntu:yakkety
+
+RUN apt-get update \
+    && apt-get install -y wget vim net-tools openssh-client openssh-server --fix-missing
+
+RUN wget -qO /tmp/jdk-8u112-linux-x64.tar.gz --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie;' http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz
+
+RUN mkdir /opt/java \
+    && tar -xzf /tmp/jdk-8u112-linux-x64.tar.gz -C /opt/java \
+    && rm -f /tmp/jdk-8u112-linux-x64.tar.gz
+
+RUN wget -qO /tmp/hadoop-2.8.0.tar.gz http://ftp.unicamp.br/pub/apache/hadoop/common/hadoop-2.8.0/hadoop-2.8.0.tar.gz
+
+RUN tar -xzf /tmp/hadoop-2.8.0.tar.gz -C /usr/local \
+    && rm -f /tmp/hadoop-2.8.0.tar.gz
+
+RUN mkdir -p /app/hadoop/tmp \
+    && chmod 750 /app/hadoop/tmp
+
+ENV JAVA_HOME /opt/java/jdk1.8.0_112
+
+ENV HADOOP_HOME /usr/local/hadoop-2.8.0
+
+ENV PATH $PATH:$HADOOP_HOME/bin:$JAVA_HOME/bin
+
+#Disable IPv6
+#cat "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+#net.ipv6.conf.default.disable_ipv6 = 1
+#net.ipv6.conf.lo.disable_ipv6 = 1
+
+RUN ssh-keygen -t rsa -f "/root/.ssh/id_rsa" -P "" -q \
+    && cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
+RUN /usr/local/hadoop-2.8.0/bin/hadoop namenode -format
+
+COPY files/run.sh /root/
+
+WORKDIR /root/
+
+RUN chmod +x /root/run.sh
+
+EXPOSE 54310
+
+CMD ["bash"]
