@@ -110,7 +110,7 @@ Para executar a contagem de palavras dos arquivos *.txt*, execute o *job*:
 ```shell
 hadoop jar /usr/local/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.0.jar wordcount /app/hadoop/books/tmp/books /app/hadoop/books/out-1
 ```
-O resultado esperado é: 
+O resultado esperado é:
 ```
 17/04/28 19:41:14 INFO mapreduce.Job: Job job_local1239149530_0001 completed successfully
 17/04/28 19:41:14 INFO mapreduce.Job: Counters: 35
@@ -155,3 +155,7 @@ O resultado esperado é:
 	File Output Format Counters
 		Bytes Written=879197
 ```
+
+Após a execução do *job*, o arquivo contendo o *output* do ***reduce***, pode ser visualizado no diretório especificado:
+
+![Docker-Hadoop2-e](images/devops-hadoop-e.png)
