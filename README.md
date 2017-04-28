@@ -38,20 +38,21 @@ Premissas e objetivos a serem observados:
 O HDFS possui arquitetura do tipo master/slave:
 ![HDFS](images/hdfsarchitecture.png)
 
-Essa arquitetura distribuída, permite confiabilidade e resiliência dos arquivos que são armazenados, através do mecanismo de replicação dos data sets. O HDFS armazena cada arquivo como uma sequência de blocos. Tanto o mecanismo de replicação, como o tamanho de bloco são configuráveis.
+Essa arquitetura distribuída, permite confiabilidade e resiliência dos arquivos que são armazenados, através do mecanismo de replicação dos *data sets*. O HDFS armazena cada arquivo como uma sequência de blocos. Tanto o mecanismo de replicação, como o tamanho de bloco são configuráveis.
 
 ## Hadoop MapReduce
-O MapReduce é o *framework* do Hadoop para processar grandes data sets, paralelamente, em grandes clusters (que podem chegar a milhares de máquinas) de maneira confiável e tolerante a falhas. Normalmente, o processamento de um job MapReduce quebra um data set em múltiplas partes que são os inputs para a tarefa de map, executados paralelamente. Inputs e outputs, são gravados em disco para que as tarefas de reduce possam ser executadas.
-O próprio framework se encarrega das tarefas de agendamento e execução dos jobs, do monitoramento e, em caso de necessidade, a re-execução dos jobs em caso de falhas.
+O MapReduce é o *framework* do Hadoop para processar grandes *data sets*, paralelamente, em grandes *clusters* (que podem chegar a milhares de máquinas) de maneira confiável e tolerante a falhas. Normalmente, o processamento de um *job* MapReduce divide um *data set* em múltiplas partes que são os *inputs* para a tarefa de ***map***, executados paralelamente. *Inputs* e *outputs*, são gravados em disco para que as tarefas de reduce possam ser executadas.
+O próprio *framework* se encarrega das tarefas de agendamento e execução dos *jobs*, do monitoramento e, em caso de necessidade, a re-execução dos *jobs* em caso de falhas.
 
-Normalmente, o framework do MapReduce e o HDFS estão rodando no mesmo conjunto de nodes do cluster, o que possibilita o agendamento e execução das tarefas nos nodes onde os dados encontram-se armazenados, reduzindo o consumo de banda de rede.
+Normalmente, o *framework* do MapReduce e o HDFS estão rodando no mesmo conjunto de nodes do *cluster*, o que possibilita o agendamento e execução das tarefas nos nodes onde os dados encontram-se armazenados, reduzindo o consumo de banda de rede.
 
-Apesar do framework do Hadoop ser escrito em Java, os jobs de MapReduce não precisam, necessariamente, serem escritos nessa mesma linguagem.
+Apesar do *framework* do Hadoop ser escrito em Java, os jobs de MapReduce não precisam, necessariamente, serem escritos nessa mesma linguagem.
 
 ## Hadoop YARN
-A idéia fundamental do YARN é dividir as funcionalidades de gerenciamento de recurso e agendamento/monitoramento de job em diferentes daemons. A ideia é ter um ResourceManager (RM) global e um ApplicationMaster (AM) por aplicação. O ResourceManager e o NodeManager formam o framework de data-computation.
+A idéia fundamental do YARN é dividir as funcionalidades de gerenciamento de recurso e agendamento/monitoramento de job em diferentes *daemons*. A ideia é ter um ResourceManager (RM) global e um ApplicationMaster (AM) por aplicação. O ResourceManager e o NodeManager formam o framework de data-computation.
 
 Com o lançamento da versão 2 do Hadoop, o YARN foi introduzido para separar o gerenciamento do processamento e o gerenciamento de recursos.
+
 ![YARN](images/yarn_architecture.gif)
 
 ## Hands On!
