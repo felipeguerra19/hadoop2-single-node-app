@@ -171,5 +171,7 @@ O console do Hadoop *cluster* encontra-se disponível na porta **8088**:
 ![Docker-Hadoop2-g](images/devops-hadoop-g.png)
 
 Espero que o material seja de grande utilidade aos interassados em adentrar ao mundo de BigData.
+
 Qualquer dúvida, comentário ou feedback, podem utilizar os [Issues](/issues) do GitHub que serão respondidos.
-Grato pela colaboração do amigo ==Felipe Contratres==!
+
+Grato pela colaboração do amigo ~~Felipe Contratres~~!
