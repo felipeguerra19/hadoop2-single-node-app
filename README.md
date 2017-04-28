@@ -1,26 +1,29 @@
 # Big Data for Newbies?
 
 ## O que é Big Data?
-”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”
-Eric Schimidt
+***”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”***
+
+**Eric Schimidt**
 CEO Google 2001-2011
 
 
 Grandes volumes de dados, há alguma controvérsia sobre a quantidade - se maior que 5Tb - a serem processados de uma vez.
 Com o advento de grandes data sets gerados na rede mundial de computadores, em meados de 2003, o Google criou um novo paradigma de processamento de dados massivo utilizando clusters de máquinas consideradas commodity, o que permitiria grande escalabilidade horizontal, sem a necessidade de investimento em hardware proprietário de supercomputadores.
-O Apache Hadoop
+
+## O Apache Hadoop
 Com a necessidade de processamento intensivo de grandes data sets, o Google criou o Hadoop. O Hadoop utiliza o paradigma MapReduce programming model, que possibilita o processamento em paralelo desses grandes data sets. O core do Hadoop é constituído do HDFS e o MapReduce. O processamento é feito levando o código empacotado para os nodes do cluster, tirando vantagem de onde os dados estão localizados.
 
 O framework do Hadoop core é constituído por:
-Hadoop Common
-Hadoop Distributed File System (HDFS)
-Hadoop YARN
-Hadoop MapReduce
+* Hadoop Common
+* Hadoop Distributed File System (HDFS)
+* Hadoop YARN
+* Hadoop MapReduce
 
 O termo Hadoop é normalmente utilizado para descrever o ecossistema de módulos e submódulos que podem ser adicionados ao core:  Apache Pig, Apache Hive, Apache HBase, Apache Phoenix, Apache Spark, Apache ZooKeeper, Cloudera Impala, Apache Flume, Apache Sqoop, Apache Oozie, e Apache Storm.
 
 O framework do Hadoop é escrito, quase na totalidade, em Java, com algumas exceções em C.
-Hadoop Distributed File System
+
+## Hadoop Distributed File System
 O HDFS tem muitas similaridades com um file system comum, entretanto, as diferenças são significativas: o HDFS é altamente tolerante a falhas, permite um throughput muito alto, o que torna-o uma ótima escolha para aplicações com grandes data sets.
 
 Premissas e objetivos a serem observados:
