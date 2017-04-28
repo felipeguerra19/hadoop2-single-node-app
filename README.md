@@ -1,7 +1,7 @@
 # Big Data for Newbies?
 
 ## O que é Big Data?
-**”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”**
+*”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”**
 
 **Eric Schimidt**
 CEO Google 2001-2011
@@ -47,7 +47,8 @@ O próprio framework se encarrega das tarefas de agendamento e execução dos jo
 Normalmente, o framework do MapReduce e o HDFS estão rodando no mesmo conjunto de nodes do cluster, o que possibilita o agendamento e execução das tarefas nos nodes onde os dados encontram-se armazenados, reduzindo o consumo de banda de rede.
 
 Apesar do framework do Hadoop ser escrito em Java, os jobs de MapReduce não precisam, necessariamente, serem escritos nessa mesma linguagem.
-Hadoop YARN
+
+## Hadoop YARN
 A idéia fundamental do YARN é dividir as funcionalidades de gerenciamento de recurso e agendamento/monitoramento de job em diferentes daemons. A ideia é ter um ResourceManager (RM) global e um ApplicationMaster (AM) por aplicação. O ResourceManager e o NodeManager formam o framework de data-computation.
 
 Com o lançamento da versão 2 do Hadoop, o YARN foi introduzido para separar o gerenciamento do processamento e o gerenciamento de recursos.
