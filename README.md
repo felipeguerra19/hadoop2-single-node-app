@@ -159,3 +159,13 @@ O resultado esperado é:
 Após a execução do *job*, o arquivo contendo o *output* do ***reduce***, pode ser visualizado no diretório especificado:
 
 ![Docker-Hadoop2-e](images/devops-hadoop-e.png)
+
+Finalmente, é importante demonstrar os recursos que o Hadoop oferece.
+
+Existe um console de gerenciamento dos DataNodes e *logs* de execução do ambiente. Nesse exemplo, o mesmo encontra-se disponível na porta **50075**:
+
+![Docker-Hadoop2-f](images/devops-hadoop-f.png)
+
+O console do Hadoop *cluster* encontra-se disponível na porta **8088**:
+
+![Docker-Hadoop2-g](images/devops-hadoop-g.png)

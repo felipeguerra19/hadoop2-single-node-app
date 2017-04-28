@@ -52,7 +52,7 @@ WORKDIR /root/
 
 RUN chmod +x /root/run.sh
 
-EXPOSE 54310
+EXPOSE 8088 43353 54090 54070 50075
 
 #ENTRYPOINT ["./run.sh"]
 
