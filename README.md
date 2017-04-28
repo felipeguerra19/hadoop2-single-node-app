@@ -1,9 +1,9 @@
 # Big Data for Newbies?
 
 ## O que é Big Data?
-***”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”***
+> ***”Desde os primórdios da civilização até 2003, a humanidade gerou 5 exabytes de dados. Agora vamos produzir 5 exabytes a cada 2 dias... E o ritmo está aumentando.”***
 
-**Eric Schimidt**
+> **Eric Schimidt**
 CEO Google 2001-2011
 
 
@@ -169,3 +169,7 @@ Existe um console de gerenciamento dos DataNodes e *logs* de execução do ambie
 O console do Hadoop *cluster* encontra-se disponível na porta **8088**:
 
 ![Docker-Hadoop2-g](images/devops-hadoop-g.png)
+
+Espero que o material seja de grande utilidade aos interassados em adentrar ao mundo de BigData.
+Qualquer dúvida, comentário ou feedback, podem utilizar os [Issues](/issues) do GitHub que serão respondidos.
+Grato pela colaboração do amigo ==Felipe Contratres==!
