@@ -174,4 +174,4 @@ Espero que o material seja de grande utilidade aos interassados em adentrar ao m
 
 Qualquer dúvida, comentário ou feedback, podem utilizar os [Issues](/issues) do GitHub que serão respondidos.
 
-Grato pela colaboração do amigo ~~Felipe Contratres~~!
+Grato pela colaboração do amigo ***Felipe Contratres***!
